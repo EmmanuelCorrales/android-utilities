@@ -6,16 +6,16 @@ import android.os.Vibrator;
 
 public class DeviceUtils {
 
-    private static long DEFAULT_VIBRATION_DURATION = 500;
+    private static long DEFAULT_VIBRATION_DURATION = 50; // milliseconds
 
     private DeviceUtils() {
     }
 
-    private static void vibrate(Context context) {
+    public static void vibrate(Context context) {
         vibrate(context, DEFAULT_VIBRATION_DURATION);
     }
 
-    private static void vibrate(Context context, long millisec) {
+    public static void vibrate(Context context, long millisec) {
         if (context == null) {
             throw new IllegalArgumentException("Argument 'millisec' cannot be null.");
         }
